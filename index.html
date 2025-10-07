@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiCheck - The Professional Network for Musicians</title>
-    <meta name="description" content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
-    <link rel="icon" href="../lovable-uploads/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" type="image/png">
-    
+    <meta name="description"
+        content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
+    <link rel="icon" href="../lovable-uploads/logo.png" type="image/png">
+
     <meta property="og:title" content="MiCheck - The Professional Network for Musicians">
-    <meta property="og:description" content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
+    <meta property="og:description"
+        content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
-    
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@lovable_dev">
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container header-content">
             <div class="logo-section">
-                <img src="./image/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" alt="MiCheck Logo" class="logo-img">
+                <img src="./image/logo.png" alt="MiCheck Logo" class="logo-img">
                 <span class="logo-text">MiCheck</span>
             </div>
             <nav class="nav-menu">
                 <a href="#artists" class="nav-link">For Artists</a>
-                <a href="#venues" class="nav-link">For Venues</a>
+                <a href="#venues" class="nav-link">For Business</a>
                 <a href="#fans" class="nav-link">For Fans</a>
             </nav>
             <div class="header-actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-                    <svg class="moon-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <svg class="moon-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
                 </button>
-                <a href="signin.html" class="btn btn-ghost">Sign In</a>
-                <a href="signup.html" class="btn btn-hero">Join Now</a>
+                <a href="#team" class="btn btn-ghost">Meet the Team</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-bg"></div>
+        <div class="hero-slideshow">
+            <div class="hero-slide" style="background-image: url('./image/hero1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('./image/hero2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('./image/hero3.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('./image/hero4.jpg');"></div>
+        </div>
+
         <div class="hero-overlay"></div>
+
         <div class="hero-content">
-            <h1 class="hero-title">The Professional Network for Musicians</h1>
-            <p class="hero-subtitle">Connect artists, venues, and fans. Find gigs, book talent, and build your music career.</p>
+            <h1 class="hero-title">Connect . Perform . Grow</h1>
+            <p class="hero-subtitle">
+                MiCheck connects artists, venues, and fans to collaborate, perform, and grow together — all in one
+                professional ecosystem.
+            </p>
             <div class="hero-actions">
-                <a href="#artists" class="btn btn-outline-light">Learn More</a>
+                <a href="#newsletter" class="btn btn-hero">Join Now</a>
             </div>
         </div>
     </section>
+
+
 
     <!-- Features Section -->
     <section class="features-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Built for the Music Industry</h2>
-                <p class="section-subtitle">Whether you're an artist, venue, or fan, MiCheck connects you with the right opportunities and people.</p>
+                <h2 class="section-title">Linking Musicians, Venues, and Fans — The Future of Live Music</h2>
+                <p class="section-subtitle">Join MiCheck — where artists get employed, venues find talent, and fans
+                    experience unforgettable music</p>
             </div>
 
             <div class="features-grid">
@@ -68,17 +100,24 @@
                 <div class="feature-card" id="artists">
                     <div class="feature-header">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
                         </div>
                         <h3 class="feature-title">For Artists</h3>
                     </div>
                     <div class="feature-content">
-                        <p class="feature-description">Showcase your talent, apply for gigs, and connect with venues and fans.</p>
+                        <p class="feature-description">Showcase your talent, apply for gigs, and connect with venues and
+                            fans.</p>
                         <ul class="feature-list">
                             <li><span class="bullet"></span>Create professional profiles</li>
                             <li><span class="bullet"></span>Apply for gigs and opportunities</li>
                             <li><span class="bullet"></span>Build your fan base</li>
-                            <li><span class="bullet"></span>Network with industry professionals</li>
+                            <li><span class="bullet"></span>Network with Entertainment Professionals</li>
                         </ul>
                         <button class="btn btn-music">Join as Artist</button>
                     </div>
@@ -88,12 +127,18 @@
                 <div class="feature-card" id="venues">
                     <div class="feature-header">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
                         </div>
-                        <h3 class="feature-title">For Venues</h3>
+                        <h3 class="feature-title">For Business</h3>
                     </div>
                     <div class="feature-content">
-                        <p class="feature-description">List your venue, post gigs, and discover amazing local talent.</p>
+                        <p class="feature-description">List your venue, post gigs, and discover amazing local talent.
+                        </p>
                         <ul class="feature-list">
                             <li><span class="bullet"></span>List and promote your venue</li>
                             <li><span class="bullet"></span>Post gigs and job opportunities</li>
@@ -108,12 +153,19 @@
                 <div class="feature-card" id="fans">
                     <div class="feature-header">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="feature-title">For Fans</h3>
                     </div>
                     <div class="feature-content">
-                        <p class="feature-description">Support your favorite artists and hire local talent for your events.</p>
+                        <p class="feature-description">Support your favorite artists and hire local talent for your
+                            events.</p>
                         <ul class="feature-list">
                             <li><span class="bullet"></span>Discover local artists</li>
                             <li><span class="bullet"></span>Support musicians directly</li>
@@ -128,20 +180,49 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-section">
+    <section id="newsletter" class="newsletter-section">
         <div class="container newsletter-container">
             <div class="newsletter-header">
-                <svg class="newsletter-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                <h2 class="newsletter-title">Stay Connected to the Music Scene</h2>
-                <p class="newsletter-subtitle">Get the latest updates on gigs, new artists, and industry news delivered to your inbox.</p>
+                <div class="newsletter-logo-container">
+                    <img src="./image/logo.png" alt="MiCheck Logo" class="newsletter-logo">
+                    <span class="newsletter-logo-text">MiCheck</span>
+                </div>
+
+                <h2 class="newsletter-title">Join the future- Join the wait list</h2>
+                <p class="newsletter-subtitle">MiCheck will be live on all android and ios platforms. Subrscribe below
+                    to join the community and get early access</p>
             </div>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email address" class="newsletter-input">
                 <button type="submit" class="btn btn-hero">Subscribe</button>
             </form>
-            <p class="newsletter-note">Join over 10,000 music industry professionals. Unsubscribe anytime.</p>
+            <p class="newsletter-note">Every subscriber will be notified after MiCheck is launched</p>
         </div>
     </section>
+
+    <!-- Meet the Team Section -->
+    <section id="team" class="team-section">
+        <div class="container team-container">
+            <h2 class="team-title">Meet the Team Behind MiCheck</h2>
+            <p class="team-subtitle">The people turning ideas into harmony.</p>
+
+            <div class="team-card">
+                <img id="team-photo" src="./image/team1.jpg" alt="Team Member" class="team-photo">
+                <h3 id="team-name" class="team-name">Rahul Upadhya</h3>
+                <p id="team-role" class="team-role">Founder & Product Lead</p>
+                <p id="team-about" class="team-about">
+                    Rahul leads the MiCheck vision — connecting artists and venues through seamless collaboration and
+                    cutting-edge design.
+                </p>
+
+                <div class="team-navigation">
+                    <button id="prev-member" class="team-arrow">&#10094;</button>
+                    <button id="next-member" class="team-arrow">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -149,12 +230,13 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="../lovable-uploads/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" alt="MiCheck Logo" class="footer-logo-img">
+                        <img src="./image/logo.png" alt="MiCheck Logo" class="footer-logo-img">
                         <span class="footer-logo-text">MiCheck</span>
                     </div>
-                    <p class="footer-description">The professional network connecting artists, venues, and fans in the music industry.</p>
+                    <p class="footer-description">The professional network connecting artists, venues, and fans in the
+                        music industry.</p>
                 </div>
-                <div class="footer-column">
+                <!-- <div class="footer-column">
                     <h4 class="footer-heading">For Artists</h4>
                     <ul class="footer-links">
                         <li><a href="#">Find Gigs</a></li>
@@ -169,7 +251,7 @@
                         <li><a href="#">Find Artists</a></li>
                         <li><a href="#">List Venue</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="footer-column">
                     <h4 class="footer-heading">Support</h4>
                     <ul class="footer-links">
@@ -181,22 +263,50 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    © 2024 MiCheck. All rights reserved. Connecting the music industry, one connection at a time.
+                    © 2026 MiCheck. All rights reserved. Connect. perform. grow
                 </div>
                 <div class="footer-social">
                     <span class="footer-social-label">Follow us:</span>
                     <div class="social-icons">
-                        <a href="https://twitter.com/micheck" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        <a href="https://twitter.com/micheck" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
                         </a>
-                        <a href="https://facebook.com/micheck" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <a href="https://facebook.com/micheck" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
                         </a>
-                        <a href="https://instagram.com/micheck" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        <a href="https://instagram.com/micheck" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
                         </a>
-                        <a href="https://linkedin.com/company/micheck" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://linkedin.com/company/micheck" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -206,4 +316,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
