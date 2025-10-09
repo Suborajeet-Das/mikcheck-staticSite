@@ -721,7 +721,7 @@ a {
 
 .team-info {
     text-align: center;
-    max-width: 600px;
+    max-width: 750px;
 }
 
 .team-name {
@@ -743,10 +743,11 @@ a {
 
 .team-about {
     font-size: 1.05rem;
-    line-height: 1.7;
     color: #555;
-    max-width: 550px;
+    max-width: 700px;
     margin: 0 auto;
+    white-space: pre-line; /* preserves line breaks and spaces */
+    line-height: 1.6; /* optional: adds readability */
 }
 
 /* Navigation Buttons */
