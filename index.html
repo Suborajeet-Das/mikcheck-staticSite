@@ -119,7 +119,7 @@
                             <li><span class="bullet"></span>Build your fan base</li>
                             <li><span class="bullet"></span>Network with Entertainment Professionals</li>
                         </ul>
-                        <button class="btn btn-music">Join as Artist</button>
+                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Artist</button>
                     </div>
                 </div>
 
@@ -145,7 +145,7 @@
                             <li><span class="bullet"></span>Browse and book artists</li>
                             <li><span class="bullet"></span>Manage bookings efficiently</li>
                         </ul>
-                        <button class="btn btn-music">Join as Venue</button>
+                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Vendor</button>
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@
                             <li><span class="bullet"></span>Hire artists for events</li>
                             <li><span class="bullet"></span>Stay updated on shows</li>
                         </ul>
-                        <button class="btn btn-music">Join as Fan</button>
+                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Fan</button>
                     </div>
                 </div>
             </div>
@@ -206,23 +206,93 @@
             <h2 class="team-title">Meet the Team Behind MiCheck</h2>
             <p class="team-subtitle">The people turning ideas into harmony.</p>
 
-            <div class="team-card">
-                <img id="team-photo" src="./image/team1.jpg" alt="Team Member" class="team-photo">
-                <h3 id="team-name" class="team-name">Rahul Upadhya</h3>
-                <p id="team-role" class="team-role">Founder & Product Lead</p>
-                <p id="team-about" class="team-about">
-                    Rahul leads the MiCheck vision — connecting artists and venues through seamless collaboration and
-                    cutting-edge design.
-                </p>
+            <div class="team-slider-wrapper">
+                <!-- Previous Button -->
+                <button class="slider-btn prev-btn" aria-label="Previous team member">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
 
-                <div class="team-navigation">
-                    <button id="prev-member" class="team-arrow">&#10094;</button>
-                    <button id="next-member" class="team-arrow">&#10095;</button>
+                <!-- Team Members Container -->
+                <div class="team-slider">
+                    <div class="team-track">
+                        <!-- Team Member 1 -->
+                        <div class="team-member active">
+                            <img src="./image/.jpg" alt="Albhi Alam" class="team-photo">
+                            <div class="team-info">
+                                <h3 class="team-name">Er. Albhi Alam</h3>
+                                <p class="team-role">Founder & Product Lead</p>
+                                <p class="team-about">
+                                    Rahul leads the MiCheck vision — connecting artists and venues through seamless
+                                    collaboration and cutting-edge design.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 2 -->
+                        <div class="team-member">
+                            <img src="./image/Bikash.jpg" alt="Bikash Baishnab" class="team-photo">
+                            <div class="team-info">
+                                <h3 class="team-name">Er. Bikash Baishnab</h3>
+                                <p class="team-role">Co-Founder & Tech Lead</p>
+                                <p class="team-about">
+                                    Suborajeet drives MiCheck's technical direction, building the core systems that
+                                    power the
+                                    artist and venue experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 3 -->
+                        <div class="team-member">
+                            <img src="./image/Rupak.jpg" alt="Rupak Kalita" class="team-photo">
+                            <div class="team-info">
+                                <h3 class="team-name">Er. Rupak Kalita</h3>
+                                <p class="team-role">Community & Marketing Lead</p>
+                                <p class="team-about">
+                                    Riya bridges the gap between musicians and fans, curating stories that amplify the
+                                    MiCheck
+                                    community.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 4 -->
+                        <div class="team-member">
+                            <img src="./image/Subro.jpg" alt="Suborajeet Das" class="team-photo">
+                            <div class="team-info">
+                                <h3 class="team-name">Suborajeet Das</h3>
+                                <p class="team-role">Community & Marketing Lead</p>
+                                <p class="team-about">
+                                    Riya bridges the gap between musicians and fans, curating stories that amplify the
+                                    MiCheck
+                                    community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Next Button -->
+                <button class="slider-btn next-btn" aria-label="Next team member">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
             </div>
+
+            <!-- Progress Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+
+
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -230,7 +300,8 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="./image/logo.png" alt="MiCheck Logo" class="footer-logo-img">
+                        <img src="../lovable-uploads/267a2a38-4f0f-4b4f-9fb2-83322871e82a.png" alt="MiCheck Logo"
+                            class="footer-logo-img">
                         <span class="footer-logo-text">MiCheck</span>
                     </div>
                     <p class="footer-description">The professional network connecting artists, venues, and fans in the
@@ -318,3 +389,17 @@
 </body>
 
 </html>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+<<<<<<< HEAD </html>
+    =======
+
+    </html>
+    >>>>>>> 1604dbf (new update)

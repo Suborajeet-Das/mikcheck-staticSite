@@ -194,62 +194,176 @@ document.querySelectorAll('.feature-card').forEach(card => {
   });
 });
 
-// Meet the Team Section Slider
-const teamMembers = [
-  {
-    name: "Rahul Upadhya",
-    role: "Founder & Product Lead",
-    about:
-      "Rahul leads the MiCheck vision — connecting artists and venues through seamless collaboration and cutting-edge design.",
-    photo: "./image/team1.jpg",
-  },
-  {
-    name: "Priya Nair",
-    role: "Marketing & Partnerships",
-    about:
-      "Priya builds strong relationships with venues and artists, ensuring MiCheck grows as a trusted network for the music industry.",
-    photo: "./image/team2.jpg",
-  },
-  {
-    name: "Arjun Mehta",
-    role: "Lead Developer",
-    about:
-      "Arjun drives the technical foundation behind MiCheck, turning creative ideas into smooth, scalable digital experiences.",
-    photo: "./image/team3.jpg",
-  },
-  {
-    name: "Simran Kaur",
-    role: "Design & Community",
-    about:
-      "Simran crafts MiCheck’s visual identity and engages with our growing community of musicians and fans worldwide.",
-    photo: "./image/team4.jpg",
-  },
-];
+// Team Slider JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.team-track');
+    const members = document.querySelectorAll('.team-member');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentIndex = 0;
+    const totalMembers = members.length;
+    
+    // Touch/swipe variables
+    let startX = 0;
+    let endX = 0;
+    let isDragging = false;
 
-let currentMember = 0;
+    // Update slider position and active states
+    function updateSlider(index) {
+        // Ensure index is within bounds
+        currentIndex = Math.max(0, Math.min(index, totalMembers - 1));
+        
+        // Move track
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+        
+        // Update active member
+        members.forEach((member, i) => {
+            member.classList.toggle('active', i === currentIndex);
+        });
+        
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+        
+        // Update button states
+        prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+        prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        nextBtn.style.opacity = currentIndex === totalMembers - 1 ? '0.3' : '1';
+        nextBtn.style.pointerEvents = currentIndex === totalMembers - 1 ? 'none' : 'auto';
+    }
 
-const nameEl = document.getElementById("team-name");
-const roleEl = document.getElementById("team-role");
-const aboutEl = document.getElementById("team-about");
-const photoEl = document.getElementById("team-photo");
+    // Previous button
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            updateSlider(currentIndex - 1);
+        }
+    });
 
-const prevBtn = document.getElementById("prev-member");
-const nextBtn = document.getElementById("next-member");
+    // Next button
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalMembers - 1) {
+            updateSlider(currentIndex + 1);
+        }
+    });
 
-function updateTeamMember(index) {
-  const member = teamMembers[index];
-  nameEl.textContent = member.name;
-  roleEl.textContent = member.role;
-  aboutEl.textContent = member.about;
-  photoEl.src = member.photo;
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            updateSlider(index);
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            if (currentIndex > 0) updateSlider(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+            if (currentIndex < totalMembers - 1) updateSlider(currentIndex + 1);
+        }
+    });
+
+    // Touch/Swipe events
+    const slider = document.querySelector('.team-slider');
+
+    slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        endX = e.touches[0].clientX;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diff = startX - endX;
+        const threshold = 50; // Minimum swipe distance
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0 && currentIndex < totalMembers - 1) {
+                // Swiped left - go to next
+                updateSlider(currentIndex + 1);
+            } else if (diff < 0 && currentIndex > 0) {
+                // Swiped right - go to previous
+                updateSlider(currentIndex - 1);
+            }
+        }
+        
+        startX = 0;
+        endX = 0;
+    });
+
+    // Mouse drag events (for desktop)
+    let mouseDown = false;
+    let startXMouse = 0;
+    let endXMouse = 0;
+
+    slider.addEventListener('mousedown', (e) => {
+        mouseDown = true;
+        startXMouse = e.clientX;
+        slider.style.cursor = 'grabbing';
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!mouseDown) return;
+        endXMouse = e.clientX;
+    });
+
+    slider.addEventListener('mouseup', () => {
+        if (!mouseDown) return;
+        mouseDown = false;
+        slider.style.cursor = 'grab';
+        
+        const diff = startXMouse - endXMouse;
+        const threshold = 50;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0 && currentIndex < totalMembers - 1) {
+                updateSlider(currentIndex + 1);
+            } else if (diff < 0 && currentIndex > 0) {
+                updateSlider(currentIndex - 1);
+            }
+        }
+        
+        startXMouse = 0;
+        endXMouse = 0;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        if (mouseDown) {
+            mouseDown = false;
+            slider.style.cursor = 'grab';
+        }
+    });
+
+    // Initialize
+    slider.style.cursor = 'grab';
+    updateSlider(0);
+});
+
+function scrollToNewsletter() {
+  const section = document.getElementById("newsletter");
+  const header = document.querySelector(".header");
+  
+  if (section && header) {
+    const headerHeight = header.offsetHeight;
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const offset = sectionTop - headerHeight - 20; // adjust padding
+    
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  } else {
+    console.error("Newsletter section not found!");
+  }
 }
 
-nextBtn.addEventListener("click", () => {
-  currentMember = (currentMember + 1) % teamMembers.length;
-  updateTeamMember(currentMember);
-});
 
-prevBtn.addEventListener("click", () => {
-  currentMember = (currentMember - 1 + teamMembers.length) % teamMembers.length;
-  updateTeamMember(currentMember);
-});
