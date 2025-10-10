@@ -1071,7 +1071,7 @@ a {
 
 /* Footer */
 .footer {
-    background-color: var(--music-primary);
+    background: linear-gradient(135deg, var(--music-primary), var(--music-primary-light));
     color: white;
     padding: 3rem 1rem;
 }
