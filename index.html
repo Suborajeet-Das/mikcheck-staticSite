@@ -8,6 +8,7 @@
     <meta name="description"
         content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
     <link rel="icon" href="../lovable-uploads/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
     <meta property="og:title" content="MiCheck - The Professional Network for Musicians">
     <meta property="og:description"
@@ -119,7 +120,7 @@
                             <li><span class="bullet"></span>Build your fan base</li>
                             <li><span class="bullet"></span>Network with Entertainment Professionals</li>
                         </ul>
-                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Artist</button>
+                        <a href="#newsletter" class="btn btn-music">Join as Artist</a>
                     </div>
                 </div>
 
@@ -179,9 +180,8 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
     <section id="newsletter" class="newsletter-section">
-        <div class="container newsletter-container">
+        <div class="newsletter-container">
             <div class="newsletter-header">
                 <div class="newsletter-logo-container">
                     <img src="./image/logo.png" alt="MiCheck Logo" class="newsletter-logo">
@@ -189,14 +189,122 @@
                 </div>
 
                 <h2 class="newsletter-title">Join the future- Join the wait list</h2>
-                <p class="newsletter-subtitle">MiCheck will be live on all android and ios platforms. Subrscribe below
-                    to join the community and get early access</p>
+                <p class="newsletter-subtitle">MiCheck will be live on all android and ios platforms. Subscribe below to
+                    join the community and get early access</p>
             </div>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" class="newsletter-input">
-                <button type="submit" class="btn btn-hero">Subscribe</button>
-            </form>
-            <p class="newsletter-note">Every subscriber will be notified after MiCheck is launched</p>
+
+            <!-- Brevo Form Integration -->
+            <div class="sib-form">
+                <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel">
+                        <div class="sib-form-message-panel__text">
+                            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                                <path
+                                    d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                            </svg>
+                            <span class="sib-form-message-panel__inner-text">Your subscription could not be saved.
+                                Please try again.</span>
+                        </div>
+                    </div>
+
+                    <div id="success-message" class="sib-form-message-panel">
+                        <div class="sib-form-message-panel__text">
+                            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                                <path
+                                    d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                            </svg>
+                            <span class="sib-form-message-panel__inner-text">Your subscription has been
+                                successful.</span>
+                        </div>
+                    </div>
+
+                    <div id="sib-container" class="sib-container--large sib-container--vertical">
+                        <form id="sib-form" method="POST"
+                            action="https://1ea2d5e3.sibforms.com/serve/MUIFAJA-ZOFJM9md4P3mJX9BewFmhEpWd0He5QP4L8hGpBbOv5j-JzeMWnZK084OgWECPFEqLgmaziaH6MA5WvJCa0pJWeSK3AVhlnnNW6hkE2fmUcW75XYJWASoNGWDQrTAc3O0bR5DjSZwM8O1xTfi3XXPBEni8iTRNdo8mm016A1sFn42H_mLmLmSWmrncjaMdHXAOnenJrfI3w=="
+                            data-type="subscription">
+
+                            <div class="newsletter-form-wrapper">
+                                <div class="sib-input sib-form-block">
+                                    <div class="form__entry entry_block">
+                                        <div class="form__label-row">
+                                            <label class="entry__label" for="EMAIL" data-required="*">
+                                                Enter your email address
+                                            </label>
+                                            <div class="entry__field">
+                                                <input class="input" type="text" id="EMAIL" name="EMAIL"
+                                                    autocomplete="off" placeholder="Enter your email address"
+                                                    data-required="true" required />
+                                            </div>
+                                        </div>
+                                        <label class="entry__error entry__error--primary"></label>
+                                        <label class="entry__specification">
+                                            Provide your email address to subscribe
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="sib-form-block sib-form-block--button">
+                                    <button class="sib-form-block__button sib-form-block__button-with-loader"
+                                        form="sib-form" type="submit">
+                                        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                                        </svg>
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="sib-optin sib-form-block" data-required="true">
+                                <div class="form__entry entry_mcq">
+                                    <div class="form__label-row">
+                                        <div class="entry__choice">
+                                            <label>
+                                                <input type="checkbox" class="input_replaced" value="1" id="OPT_IN"
+                                                    name="OPT_IN" required />
+                                                <span style="font-size:0.875rem; color:var(--muted-foreground);">
+                                                    I agree to receive your newsletters and accept the data privacy
+                                                    statement.
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <label class="entry__error entry__error--primary"></label>
+                                    <label class="entry__specification">
+                                        You may unsubscribe at any time using the link in our newsletter.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="sib-captcha sib-form-block">
+                                <div class="form__entry entry_block">
+                                    <div class="form__label-row">
+                                        <script>
+                                            function handleCaptchaResponse() {
+                                                var event = new Event('captchaChange');
+                                                document.getElementById('sib-captcha').dispatchEvent(event);
+                                            }
+                                        </script>
+                                        <div class="g-recaptcha sib-visible-recaptcha" id="sib-captcha"
+                                            data-sitekey="6LfiGukrAAAAAPN-LikYvrb1GPjEjT2Tt5h4W-Uq"
+                                            data-callback="handleCaptchaResponse" style="direction:ltr"></div>
+                                    </div>
+                                    <label class="entry__error entry__error--primary"></label>
+                                    <label class="entry__specification">
+                                        Form secured by reCAPTCHA
+                                    </label>
+                                </div>
+                            </div>
+
+                            <input type="text" name="email_address_check" value="" class="input--hidden">
+                            <input type="hidden" name="locale" value="en">
+                        </form>
+                    </div>
+
+                    <p class="newsletter-note">Every subscriber will be notified after MiCheck is launched</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -224,7 +332,8 @@
                                 <h3 class="team-name">Er. Albhi Alam</h3>
                                 <p class="team-role">CEO / Founder / Global Staffing Specialist / Musician</p>
                                 <p class="team-about">
-                                    Albhi Alam, a civil engineering graduate from RGU, brings 5 years of expertise in contingent
+                                    Albhi Alam, a civil engineering graduate from RGU, brings 5 years of expertise in
+                                    contingent
                                     IT recruitment globally, showcasing exceptional networking skills and a
                                     multihyphenate talent pool.
 
@@ -332,8 +441,7 @@
             <div class="footer-grid">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="./image/logo.png" alt="MiCheck Logo"
-                            class="footer-logo-img">
+                        <img src="./image/logo.png" alt="MiCheck Logo" class="footer-logo-img">
                         <span class="footer-logo-text">MiCheck</span>
                     </div>
                     <p class="footer-description">The professional network connecting artists, venues, and fans in the
@@ -371,8 +479,8 @@
                 <div class="footer-social">
                     <span class="footer-social-label">Follow us:</span>
                     <div class="social-icons">
-                        <a href="https://twitter.com/micheck" target="_blank" rel="noopener noreferrer"
-                            class="social-icon" aria-label="Twitter">
+                        <a href="https://x.com/micheckapp" target="_blank" rel="noopener noreferrer" class="social-icon"
+                            aria-label="Twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -389,7 +497,7 @@
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/micheck" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/micheckapp/" target="_blank" rel="noopener noreferrer"
                             class="social-icon" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -399,7 +507,7 @@
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="https://linkedin.com/company/micheck" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.linkedin.com/company/micheck/" target="_blank" rel="noopener noreferrer"
                             class="social-icon" aria-label="LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -417,21 +525,9 @@
         </div>
     </footer>
 
+    <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
-</a>
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-<<<<<<< HEAD </html>
-    =======
-
-    </html>
-    >>>>>>> 1604dbf (new update)
