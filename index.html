@@ -8,7 +8,13 @@
     <meta name="description"
         content="Connect artists, venues, and fans. Find gigs, book talent, and build your music career on the professional network for musicians.">
     <link rel="icon" href="../lovable-uploads/logo.png" type="image/png">
+    
+    <!-- Load reCAPTCHA first -->
+    <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
+    
+    <!-- Load Brevo styles before custom styles -->
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" href="./styles.css">
 
     <meta property="og:title" content="MiCheck - The Professional Network for Musicians">
     <meta property="og:description"
@@ -20,7 +26,6 @@
     <meta name="twitter:site" content="@lovable_dev">
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -65,7 +70,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-slideshow">
-            <div class="hero-slide" style="background-image: url('./image/hero1.jpg');"></div>
+            <div class="hero-slide active" style="background-image: url('./image/hero1.jpg');"></div>
             <div class="hero-slide" style="background-image: url('./image/hero2.jpg');"></div>
             <div class="hero-slide" style="background-image: url('./image/hero3.jpg');"></div>
             <div class="hero-slide" style="background-image: url('./image/hero4.jpg');"></div>
@@ -84,8 +89,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Features Section -->
     <section class="features-section">
@@ -146,7 +149,7 @@
                             <li><span class="bullet"></span>Browse and book artists</li>
                             <li><span class="bullet"></span>Manage bookings efficiently</li>
                         </ul>
-                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Vendor</button>
+                        <a href="#newsletter" class="btn btn-music">Join as Vendor</a>
                     </div>
                 </div>
 
@@ -173,13 +176,14 @@
                             <li><span class="bullet"></span>Hire artists for events</li>
                             <li><span class="bullet"></span>Stay updated on shows</li>
                         </ul>
-                        <button class="btn btn-music" onclick="scrollToNewsletter()">Join as Fan</button>
+                        <a href="#newsletter" class="btn btn-music">Join as Fan</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Newsletter Section -->
     <section id="newsletter" class="newsletter-section">
         <div class="newsletter-container">
             <div class="newsletter-header">
@@ -188,7 +192,7 @@
                     <span class="newsletter-logo-text">MiCheck</span>
                 </div>
 
-                <h2 class="newsletter-title">Join the future- Join the wait list</h2>
+                <h2 class="newsletter-title">Join the future - Join the wait list</h2>
                 <p class="newsletter-subtitle">MiCheck will be live on all android and ios platforms. Subscribe below to
                     join the community and get early access</p>
             </div>
@@ -430,8 +434,6 @@
                 <span class="dot" data-index="2"></span>
                 <span class="dot" data-index="3"></span>
             </div>
-
-
         </div>
     </section>
 
@@ -447,22 +449,6 @@
                     <p class="footer-description">The professional network connecting artists, venues, and fans in the
                         music industry.</p>
                 </div>
-                <!-- <div class="footer-column">
-                    <h4 class="footer-heading">For Artists</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Find Gigs</a></li>
-                        <li><a href="#">Create Profile</a></li>
-                        <li><a href="#">Build Network</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-heading">For Venues</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Post Gigs</a></li>
-                        <li><a href="#">Find Artists</a></li>
-                        <li><a href="#">List Venue</a></li>
-                    </ul>
-                </div> -->
                 <div class="footer-column">
                     <h4 class="footer-heading">Support</h4>
                     <ul class="footer-links">
@@ -527,7 +513,7 @@
 
     <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
     <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <script src="script.js"></script>
+    <script src ='script.js'></script>
 </body>
 
 </html>
